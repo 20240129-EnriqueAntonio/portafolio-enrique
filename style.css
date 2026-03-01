@@ -63,6 +63,7 @@ nav ul li a {
     padding: 4rem 2rem;
     background: var(--secondary);
     color: white;
+    border-radius: 100px;
 }
 
 .hero h1 {
@@ -77,6 +78,7 @@ nav ul li a {
 .hero .tagline {
     margin-top: 1rem;
     font-style: italic;
+    border-radius: 100px;
     color: var(--accent);
 }
 
@@ -102,7 +104,7 @@ h2 {
 .card {
     background: var(--light);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 100px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
@@ -194,4 +196,91 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* 📱 Móviles pequeños (pantallas menores a 480px) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* proyectos en una sola columna */
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-group {
+        width: 100%;
+    }
+}
+
+/* 📲 Tablets (pantallas entre 481px y 768px) */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .skills-container {
+        gap: 1rem;
+    }
+
+    .skill-group {
+        width: 90%;
+    }
+}
+
+/* 💻 Escritorios medianos (pantallas entre 769px y 1024px) */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skills-container {
+        gap: 1.5rem;
+    }
+}
+
+/* 🖥️ Escritorios grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .skills-container {
+        gap: 2rem;
+    }
 }
